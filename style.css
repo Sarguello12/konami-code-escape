@@ -1,3 +1,23 @@
+/*===== main page styling =====*/
+
 .parent-container {
     background-color: black;
+}
+
+h1 {
+    font-family: 'Creepster', cursive;
+    font-size: 75px!important;
+    color: #9da338;
+}
+
+i {
+    font-size: 40px;
+
+}
+
+#fancy-word{
+    font-style: italic;
+    font-size: 90px;
+    color: #ced650;
+    -webkit-text-stroke: 3px #8B0000;
 }
