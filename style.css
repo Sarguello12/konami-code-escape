@@ -1,6 +1,5 @@
 /*===== main page styling =====*/
-
-.parent-container {
+* {
     background-color: black;
 }
 
@@ -12,7 +11,6 @@ h1 {
 
 i {
     font-size: 40px;
-
 }
 
 .hidden {
