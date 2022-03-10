@@ -15,7 +15,42 @@ i {
 
 }
 
-#fancy-word{
+.hidden {
+    display: none;
+}
+
+button {
+    font-size: 40px!important;
+    font-family: 'Creepster', cursive!important;
+    text-transform: uppercase;
+    background-color: #d5d988;
+    color: #8B0000;
+    cursor: pointer;
+    border: 3px solid #9da338;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+}
+
+button:hover {
+    color: #ff0000;
+}
+
+.message {
+    font-family: 'Creepster', cursive;
+    color: #9da338;
+    font-size: 50px;
+}
+
+.message a {
+    color: #8B0000;
+    text-decoration: none;
+}
+
+.message a:hover {
+    color: #ff0000;
+}
+
+#fancy-word {
     font-style: italic;
     font-size: 90px;
     color: #ced650;

@@ -12,26 +12,33 @@
 </head>
 <body>
 <!--    parent container covers the entire page-->
-    <div class="parent-container d-flex justify-content-center align-items-center vh-200">
+    <div class="parent-container d-flex justify-content-center align-items-center vh-125">
 <!--        child container holds all on-screen elements-->
         <div class="child-container text-center pb-5">
             <div class="spooky-div">
                 <img src="assets/TxLD.gif" alt="flickering candle">
             </div>
 
+            <div class="message pb-5">
+
+            </div>
+            <button class="hidden" onClick="refreshPage()">Restart Game</button>
+
 <!--            on-screen text and code instructions-->
-            <h1>Can you enter the <span id="fancy-word">konami code</span> in time?</h1>
-            <div>
-                <i class="fa-solid fa-up-long"></i>
-                <i class="fa-solid fa-up-long"></i>
-                <i class="fa-solid fa-down-long"></i>
-                <i class="fa-solid fa-down-long"></i>
-                <i class="fa-solid fa-left-long"></i>
-                <i class="fa-solid fa-right-long"></i>
-                <i class="fa-solid fa-left-long"></i>
-                <i class="fa-solid fa-right-long"></i>
-                <i class="fa-solid fa-b"></i>
-                <i class="fa-solid fa-a"></i>
+            <div id="directions">
+                <h1>Can you enter the <span id="fancy-word">konami code</span> in time?</h1>
+                <div>
+                    <i class="fa-solid fa-up-long"></i>
+                    <i class="fa-solid fa-up-long"></i>
+                    <i class="fa-solid fa-down-long"></i>
+                    <i class="fa-solid fa-down-long"></i>
+                    <i class="fa-solid fa-left-long"></i>
+                    <i class="fa-solid fa-right-long"></i>
+                    <i class="fa-solid fa-left-long"></i>
+                    <i class="fa-solid fa-right-long"></i>
+                    <i class="fa-solid fa-b"></i>
+                    <i class="fa-solid fa-a"></i>
+                </div>
             </div>
         </div>
     </div>
@@ -46,13 +53,14 @@
 
 
 <!--=====SCRIPT TAGS=====-->
-<!--js file-->
-    <script src="konami-function.js"></script>
+
 <!--font awesome-->
     <script src="https://kit.fontawesome.com/5ba8dda5c4.js" crossorigin="anonymous"></script>
 <!--jQuery-->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <!--bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<!--js file-->
+    <script src="konami-function.js"></script>
 </body>
 </html>
