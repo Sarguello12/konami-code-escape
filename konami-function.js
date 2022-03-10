@@ -3,8 +3,9 @@
 // ========== countdown logic ==========
 
 function gameOver(){
+    $("img").attr("src", "assets/IAoG.gif")
     $(".spooky-div").css("background", "red");
-    $("img").css("visibility", "hidden");
+    // $("img").css("visibility", "hidden");
     $(".message").html("Looks like you didn't make it...<br>better luck next time...")
     $("button").removeClass("hidden");
     $("#directions").addClass("hidden");
