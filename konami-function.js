@@ -9,7 +9,7 @@ function gameOver(){
     $("#directions").addClass("hidden");
 }
 
-let gameTime = setTimeout(gameOver, 4000)
+let gameTime = setTimeout(gameOver, 5000)
 
 // allows the user to refresh the game when the button is clicked
 function refreshPage(){
