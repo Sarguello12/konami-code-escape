@@ -2,14 +2,18 @@
 
 // ========== countdown logic ==========
 
+// button allows user to start game when ready
+$("#start-game").click(function(){
+    setTimeout(gameOver, 5000)
+})
+
+
 function gameOver(){
     $("img").attr("src", "assets/IAoG.gif")
     $(".message").html("Looks like you didn't make it...<br>better luck next time...")
-    $("button").removeClass("hidden");
+    $("#restart-button").removeClass("hidden");
     $("#directions").addClass("hidden");
 }
-
-let gameTime = setTimeout(gameOver, 5000)
 
 // allows the user to refresh the game when the button is clicked
 function refreshPage(){
@@ -67,7 +71,7 @@ function verifyCodeLength(potentialCode){
     if (potentialCode.length === 10 && JSON.stringify(userInput) === JSON.stringify(konamiCode)) {
             clearTimeout(gameTime);
             $(".message").html("Congratulations you survived! For now... <br> If you enjoyed this game check out the code at: <br> <a href='https://github.com/Sarguello12' target='_blank''>github.com/Sarguello12</a> ");
-            $("button").removeClass("hidden");
+            $("#restart-button").removeClass("hidden");
             $("#directions").addClass("hidden");
         }
     }

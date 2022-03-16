@@ -13,16 +13,17 @@
 <body>
 <!--    parent container covers the entire page-->
     <div class="parent-container d-flex justify-content-center align-items-center vh-200">
+
 <!--        child container holds all on-screen elements-->
-        <div class="child-container text-center pb-5">
+        <div class="child-container text-center pb-3">
             <div class="spooky-div">
                 <img src="assets/TxLD.gif" alt="flickering candle">
             </div>
 
-            <div class="message pb-5">
+            <div class="message pb-4">
 
             </div>
-            <button class="hidden" onClick="refreshPage()">Restart Game</button>
+            <button id="restart-button" class="hidden" onClick="refreshPage()">Restart Game</button>
 
 <!--            on-screen text and code instructions-->
             <div id="directions">
@@ -39,6 +40,7 @@
                     <i class="fa-solid fa-b"></i>
                     <i class="fa-solid fa-a"></i>
                 </div>
+                <button id="start-game" class="mt-4">Ready to begin?</button>
             </div>
         </div>
     </div>
