@@ -1,10 +1,9 @@
 "use strict";
-
 // ========== countdown logic ==========
 
 // button allows user to start game when ready
 $("#start-game").click(function(){
-    setTimeout(gameOver, 5000)
+    verifyCodeLength();
 })
 
 
@@ -68,6 +67,8 @@ $(document).keyup(function(e){
 
 // function takes in the array of potential code and checks the length of characters and if the characters match the characters of the konami code
 function verifyCodeLength(potentialCode){
+    let gameTime = setTimeout(gameOver, 5000);
+
     if (potentialCode.length === 10 && JSON.stringify(userInput) === JSON.stringify(konamiCode)) {
             clearTimeout(gameTime);
             $(".message").html("Congratulations you survived! For now... <br> If you enjoyed this game check out the code at: <br> <a href='https://github.com/Sarguello12' target='_blank''>github.com/Sarguello12</a> ");
