@@ -6,7 +6,7 @@ $("#start-game").click(function(){
     verifyCodeLength();
 })
 
-
+//function ends games and rearranges the page
 function gameOver(){
     $("img").attr("src", "assets/IAoG.gif")
     $(".message").html("Looks like you didn't make it...<br>better luck next time...")
@@ -76,7 +76,6 @@ function verifyCodeLength(potentialCode){
             $("#directions").addClass("hidden");
         }
     }
-
 
 // function runs code to verify array input when enter is pressed
 $(document).keyup(function(e){
