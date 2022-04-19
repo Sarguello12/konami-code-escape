@@ -83,3 +83,6 @@ $(document).keyup(function(e){
         verifyCodeLength(userInput);
     }
 })
+
+//difficulty level function
+$("#difficulty")
