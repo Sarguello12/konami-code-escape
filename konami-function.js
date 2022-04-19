@@ -86,5 +86,5 @@ $(document).keyup(function(e){
 
 //difficulty level function
 $("#difficulty").on("change", function(){
-    alert("works")
+    alert(this.value);
 })
