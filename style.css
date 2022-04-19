@@ -55,3 +55,24 @@ button:hover {
     -webkit-text-stroke: 3px #8B0000;
 }
 
+#dropdownMenuButton1 {
+    width: 85px;
+    height: 35px;
+    padding: 0;
+    text-align: center;
+    font-size: 25px!important;
+}
+
+.dropdown-menu, .dropdown-item{
+    background-color: #d5d988!important;
+    font-family: 'Creepster', cursive;
+}
+
+.dropdown-item:hover {
+    background-color: #9da338!important;
+    color: #8B0000!important;
+}
+
+.dropdown-item:active {
+    color: #ff0000!important;
+}
