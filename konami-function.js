@@ -85,6 +85,14 @@ $(document).keyup(function(e){
 })
 
 //difficulty level function
-$("#difficulty").on("change", function(){
-    alert(this.value);
-})
+
+    $("#difficulty").on("change", function () {
+        // alert(this.value);
+        if (this.value === "Beginner") {
+            return 7000;
+        } else if (this.value === "Average") {
+            return 5000;
+        } else if (this.value === "Advanced") {
+            return 3000;
+        }
+    })
