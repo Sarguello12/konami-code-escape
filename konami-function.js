@@ -1,5 +1,21 @@
 "use strict";
 // ========== countdown logic ==========
+//difficulty level function
+let difficultyLevel;
+
+$("#difficulty").on("change", function () {
+    // alert(this.value);
+
+        if (this.value === "Beginner") {
+            difficultyLevel = 7000;
+        } else if (this.value === "Average") {
+            difficultyLevel = 5000;
+        } else if (this.value === "Advanced") {
+            difficultyLevel = 3000;
+        }
+    alert(difficultyLevel)
+})
+
 
 // button allows user to start game when ready
 $("#start-game").click(function(){
@@ -67,7 +83,7 @@ $(document).keyup(function(e){
 
 // function takes in the array of potential code and checks the length of characters and if the characters match the characters of the konami code
 function verifyCodeLength(potentialCode){
-    let gameTime = setTimeout(gameOver, 5000);
+    let gameTime = setTimeout(gameOver, difficultyLevel);
 
     if (potentialCode.length === 10 && JSON.stringify(userInput) === JSON.stringify(konamiCode)) {
             clearTimeout(gameTime);
@@ -86,13 +102,14 @@ $(document).keyup(function(e){
 
 //difficulty level function
 
-    $("#difficulty").on("change", function () {
-        // alert(this.value);
-        if (this.value === "Beginner") {
-            return 7000;
-        } else if (this.value === "Average") {
-            return 5000;
-        } else if (this.value === "Advanced") {
-            return 3000;
-        }
-    })
+
+    // $("#difficulty").on("change", function () {
+    //     // alert(this.value);
+    //     if (this.value === "Beginner") {
+    //         return 7000;
+    //     } else if (this.value === "Average") {
+    //         return 5000;
+    //     } else if (this.value === "Advanced") {
+    //         return 3000;
+    //     }
+    // })

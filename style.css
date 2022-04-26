@@ -63,9 +63,13 @@ button:hover {
     font-size: 25px!important;
 }
 
-.dropdown-menu, .dropdown-item{
+.dropdown-menu, option{
     background-color: #d5d988!important;
     font-family: 'Creepster', cursive;
+}
+
+option {
+    font-size: 15px;
 }
 
 .dropdown-item:hover {
