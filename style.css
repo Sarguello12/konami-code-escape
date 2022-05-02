@@ -17,17 +17,17 @@ i {
     display: none;
 }
 
-button {
-    font-size: 40px!important;
-    font-family: 'Creepster', cursive!important;
-    text-transform: uppercase;
-    background-color: #d5d988;
-    color: #8B0000;
-    cursor: pointer;
-    border: 3px solid #9da338;
-    padding: 0.25em 0.5em;
-    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-}
+/*.action-button {*/
+/*    font-size: 40px!important;*/
+/*    font-family: 'Creepster', cursive!important;*/
+/*    text-transform: uppercase;*/
+/*    background-color: #d5d988!important;*/
+/*    color: #8B0000!important;*/
+/*    cursor: pointer;*/
+/*    border: 3px solid #9da338!important;*/
+/*    padding: 0.25em 0.5em;*/
+/*    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px!important;*/
+/*}*/
 
 button:hover {
     color: #ff0000;
@@ -55,8 +55,8 @@ button:hover {
     -webkit-text-stroke: 3px #8B0000;
 }
 
-#dropdownMenuButton1 {
-    width: 85px;
+.info-button {
+    width: 50px;
     height: 35px;
     padding: 0;
     text-align: center;
@@ -80,3 +80,23 @@ option {
 .dropdown-item:active {
     color: #ff0000!important;
 }
+
+.modal * {
+    background-color: #d5d988!important;
+}
+
+/*Buttons*/
+button {
+    background-color: #d5d988;
+    color: #8B0000;
+    border: 3px solid #9da338;
+    box-shadow: 1px 1px 0 0, 2px 2px 0 0, 3px 3px 0 0, 4px 4px 0 0, 5px 5px 0 0;
+}
+
+/*    font-size: 40px!important;*/
+/*    font-family: 'Creepster', cursive!important;*/
+/*    text-transform: uppercase;*/
+
+/*    padding: 0.25em 0.5em;*/
+/*    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px!important;*/
+/*}

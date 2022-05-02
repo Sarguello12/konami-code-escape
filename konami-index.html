@@ -17,8 +17,31 @@
 <!--        child container holds all on-screen elements-->
         <div class="child-container text-center pb-3">
 
-            <div class="dropdown d-flex justify-content-end">
-                <button class="dropdown-toggle d-flex align-items-center justify-content-center" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+<!--            contains both direction and level buttons-->
+            <div class="dropdown d-flex justify-content-between">
+                <!-- Button trigger modal -->
+                <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Launch static backdrop modal
+                </button>
+
+                <!-- Modal -->
+                <div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="dropdown-toggle d-flex align-items-center justify-content-center btn-menu" data-bs-toggle="dropdown">
                     Level
                 </button>
                 <label for="difficulty"></label>
@@ -33,9 +56,6 @@
                 <img src="assets/TxLD.gif" alt="flickering candle">
             </div>
 
-            <div class="message pb-4">
-
-            </div>
             <button id="restart-button" class="hidden" onClick="refreshPage()">Restart Game</button>
 
 <!--            on-screen text and code instructions-->
@@ -57,14 +77,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
 
 
 <!--=====SCRIPT TAGS=====-->
