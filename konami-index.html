@@ -20,22 +20,32 @@
 <!--            contains both direction and level buttons-->
             <div class="dropdown d-flex justify-content-between">
                 <!-- Button trigger modal -->
-                <button class="menu-button" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    Launch static backdrop modal
-                </button>
+                <button class="menu-button" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Instructions</button>
 
                 <!-- Modal -->
                 <div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                <i class="fa-solid fa-up-long"></i>
+                                <i class="fa-solid fa-up-long"></i>
+                                <i class="fa-solid fa-down-long"></i>
+                                <i class="fa-solid fa-down-long"></i>
+                                <i class="fa-solid fa-left-long"></i>
+                                <i class="fa-solid fa-right-long"></i>
+                                <i class="fa-solid fa-left-long"></i>
+                                <i class="fa-solid fa-right-long"></i>
+                                <i class="fa-solid fa-b"></i>
+                                <i class="fa-solid fa-a"></i>
                             </div>
                             <div class="modal-body">
-                                ...
+                                <h4>Can you enter the code in time?</h4>
+                                <p>This simple game combines Bootstrap, CSS and Vanilla JavaScript to see if you have the speed to enter the konami code within a set time before the code accesses the DOM to display a success or failure response based on your speed and selected difficulty.</p>
+                                <p>Simply enter the code and press enter...if you can...</p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <a id="modal-link" href="https://github.com/Sarguello12/konami-code-escape" target="_blank">Check out the code on my Github!</a>
+                                <button type="button" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -56,11 +66,11 @@
                 <img src="assets/TxLD.gif" alt="flickering candle">
             </div>
 
-            <button id="restart-button" class="hidden" onClick="refreshPage()">Restart Game</button>
+            <button class="hidden play-button" onClick="refreshPage()">Restart Game</button>
 
 <!--            on-screen text and code instructions-->
             <div id="directions">
-                <h1>Can you enter the <span id="fancy-word">konami code</span> in time?</h1>
+                <h1 id="tag-line">Can you enter the <span id="fancy-word">konami code</span> in time?</h1>
                 <div>
                     <i class="fa-solid fa-up-long"></i>
                     <i class="fa-solid fa-up-long"></i>
