@@ -4,16 +4,15 @@
 let difficultyLevel;
 
 $("#difficulty").on("change", function () {
-    // alert(this.value);
 
-        if (this.value === "Beginner") {
+        if (this.value === "beginner") {
             difficultyLevel = 7000;
-        } else if (this.value === "Average") {
+        } else if (this.value === "average") {
             difficultyLevel = 5000;
-        } else if (this.value === "Advanced") {
+        } else if (this.value === "advanced") {
             difficultyLevel = 3000;
         }
-    alert(difficultyLevel)
+    // alert(difficultyLevel)
 })
 
 
