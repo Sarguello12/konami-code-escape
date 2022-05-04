@@ -13,8 +13,6 @@ $("#difficulty").on("change", function () {
         }
 })
 
-
-
 // allows the user to refresh the game when the button is clicked
 function refreshPage(){
     window.location.reload();
@@ -66,27 +64,26 @@ $(document).keyup(function(e){
     }
 })
 // function takes in the array of potential code and checks the length of characters and if the characters match the characters of the konami code
-function verifyCodeLength(userInput){
-    if(userInput === konamiCode) {
-        return true;
-    }
-}
+// function verifyCodeLength(userInput){
+//     if(userInput === konamiCode){
+//         console.log(userInput)
+//
+//     }
+// }
 
-function startGame(difficultyLevel, userInput){
-    setTimeout(function(){
+function startGame(difficultyLevel, userInput, konamiCode){
+    const gameTimer = setTimeout(function(){
 
-    $(document).keyup(function(e){
-    if(e.keyCode === 13 && verifyCodeLength(userInput) === true){
-        clearTimeout();
-            gameWin();
-    }
-})
-    console.log(verifyCodeLength())
-    gameOver();
+            gameOver();
 
     }, difficultyLevel);
 
+    $(document).keyup(function(e) {
+        if (e.keyCode === 13 && userInput === konamiCode) {
+            clearTimeout(gameTimer)
 
+        }
+    })
 
 }
 
@@ -96,8 +93,6 @@ function gameWin(){
     $("#directions").addClass("hidden");
 }
 
-
-
 function gameOver(){
     $("img").attr("src", "assets/IAoG.gif")
     $(".message").html("Looks like you didn't make it...<br>better luck next time...")
@@ -106,5 +101,6 @@ function gameOver(){
 }
 
 $("#start-game").click(function(){
-    startGame(difficultyLevel, userInput);
+    startGame(difficultyLevel, userInput, konamiCode);
+
 })
