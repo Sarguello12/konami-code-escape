@@ -1,9 +1,48 @@
 "use strict";
-// ========== countdown logic ==========
-//difficulty level function
-let difficultyLevel = 5000;
 
+function startGame(difficultyLevel, userInput, konamiCode){
+    const gameTimer = setTimeout(function(){ gameOver(); }, difficultyLevel);
+
+    $(document).keyup(function(e) {
+        if (e.keyCode === 13 && verifyCode(userInput, konamiCode) === true) {
+            clearTimeout(gameTimer)
+            gameWin();
+        }
+    })
+}
+
+function verifyCode(array1, array2) {
+    if (array1.length === array2.length) {
+        return array1.every((element, index) => {
+            if (element === array2[index]) {
+                return true;
+            }
+            return false;
+        });
+    }
+    return false;
+}
+
+function gameWin(){
+    $(".message").html("Congratulations you survived! For now... <br> If you enjoyed this game check out the code at: <br> <a href='https://github.com/Sarguello12' target='_blank''>github.com/Sarguello12</a> ");
+    $("#restart-button").removeClass("hidden");
+    $("#directions").addClass("hidden");
+}
+
+function gameOver(){
+    $("img").attr("src", "assets/IAoG.gif")
+    $(".message").text("Looks like you didn't make it...<br>better luck next time...")
+    $("#restart-button").removeClass("hidden");
+    $("#directions").addClass("hidden");
+}
+
+
+
+
+
+let difficultyLevel = 5000;
 $("#difficulty").on("change", function () {
+
         if (this.value === "beginner") {
             difficultyLevel = 7000;
         } else if (this.value === "average") {
@@ -63,44 +102,8 @@ $(document).keyup(function(e){
             break;
     }
 })
-// function takes in the array of potential code and checks the length of characters and if the characters match the characters of the konami code
-// function verifyCodeLength(userInput){
-//     if(userInput === konamiCode){
-//         console.log(userInput)
-//
-//     }
-// }
 
-function startGame(difficultyLevel, userInput, konamiCode){
-    const gameTimer = setTimeout(function(){
-
-            gameOver();
-
-    }, difficultyLevel);
-
-    $(document).keyup(function(e) {
-        if (e.keyCode === 13 && userInput === konamiCode) {
-            clearTimeout(gameTimer)
-
-        }
-    })
-
-}
-
-function gameWin(){
-    $(".message").html("Congratulations you survived! For now... <br> If you enjoyed this game check out the code at: <br> <a href='https://github.com/Sarguello12' target='_blank''>github.com/Sarguello12</a> ");
-    $("#restart-button").removeClass("hidden");
-    $("#directions").addClass("hidden");
-}
-
-function gameOver(){
-    $("img").attr("src", "assets/IAoG.gif")
-    $(".message").html("Looks like you didn't make it...<br>better luck next time...")
-    $("#restart-button").toggleClass("hidden");
-    $("#directions").addClass("hidden");
-}
 
 $("#start-game").click(function(){
     startGame(difficultyLevel, userInput, konamiCode);
-
 })
