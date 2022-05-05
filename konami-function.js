@@ -1,4 +1,5 @@
 "use strict";
+let difficultyLevel = 5000;
 
 function startGame(Level, inputCode, correctCode){
     const gameTimer = setTimeout(function(){
@@ -37,26 +38,22 @@ function gameOver(){
     $(".instruction").addClass("hidden");
 }
 
-
-
-
-
-let difficultyLevel = 5000;
-$("#difficulty").on("change", function () {
-
-        if (this.value === "beginner") {
-            difficultyLevel = 7000;
-        } else if (this.value === "average") {
-            difficultyLevel = 5000;
-        } else if (this.value === "advanced") {
-            difficultyLevel = 3000;
-        }
-})
-
 // allows the user to refresh the game when the button is clicked
 function refreshPage(){
     window.location.reload();
 }
+
+// allows the user to change the difficulty level
+$("#difficulty").on("change", function () {
+
+        if (this.value === "beginner") {
+            difficultyLevel = 8000;
+        } else if (this.value === "average") {
+            difficultyLevel = 5000;
+        } else if (this.value === "advanced") {
+            difficultyLevel = 2000;
+        }
+})
 
 // disables the movement caused by hitting the arrow keys
 window.addEventListener("keydown", function(e) {
@@ -104,7 +101,7 @@ $(document).keyup(function(e){
     }
 })
 
-
+// clicking the start game button triggers the timeout to begin
 $("#start-game").click(function(){
     startGame(difficultyLevel, userInput, konamiCode);
 })
