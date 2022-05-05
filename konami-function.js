@@ -1,10 +1,12 @@
 "use strict";
 
-function startGame(difficultyLevel, userInput, konamiCode){
-    const gameTimer = setTimeout(function(){ gameOver(); }, difficultyLevel);
+function startGame(Level, inputCode, correctCode){
+    const gameTimer = setTimeout(function(){
+        gameOver();
+    }, Level);
 
     $(document).keyup(function(e) {
-        if (e.keyCode === 13 && verifyCode(userInput, konamiCode) === true) {
+        if (e.keyCode === 13 && verifyCode(inputCode, correctCode) === true) {
             clearTimeout(gameTimer)
             gameWin();
         }
@@ -14,10 +16,7 @@ function startGame(difficultyLevel, userInput, konamiCode){
 function verifyCode(array1, array2) {
     if (array1.length === array2.length) {
         return array1.every((element, index) => {
-            if (element === array2[index]) {
-                return true;
-            }
-            return false;
+            return element === array2[index];
         });
     }
     return false;
@@ -27,13 +26,15 @@ function gameWin(){
     $(".message").html("Congratulations you survived! For now... <br> If you enjoyed this game check out the code at: <br> <a href='https://github.com/Sarguello12' target='_blank''>github.com/Sarguello12</a> ");
     $("#restart-button").removeClass("hidden");
     $("#directions").addClass("hidden");
+    $(".instruction").addClass("hidden");
 }
 
 function gameOver(){
     $("img").attr("src", "assets/IAoG.gif")
-    $(".message").text("Looks like you didn't make it...<br>better luck next time...")
+    $(".message").html("Looks like you didn't make it...<br>better luck next time...")
     $("#restart-button").removeClass("hidden");
     $("#directions").addClass("hidden");
+    $(".instruction").addClass("hidden");
 }
 
 
