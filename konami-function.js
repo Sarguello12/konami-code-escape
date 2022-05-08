@@ -14,6 +14,7 @@ function startGame(Level, inputCode, correctCode){
     })
 }
 
+//function used to check value of user inputted array to that of the complete konami code array
 function verifyCode(array1, array2) {
     if (array1.length === array2.length) {
         return array1.every((element, index) => {
