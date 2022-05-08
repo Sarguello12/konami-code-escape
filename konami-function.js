@@ -23,6 +23,7 @@ function verifyCode(array1, array2) {
     return false;
 }
 
+// function for game win
 function gameWin(){
     $(".message").html("Congratulations you survived! For now... <br> If you enjoyed this game check out the code at: <br> <a href='https://github.com/Sarguello12' target='_blank''>github.com/Sarguello12</a> ");
     $("#restart-button").removeClass("hidden");
@@ -30,6 +31,7 @@ function gameWin(){
     $(".instruction").addClass("hidden");
 }
 
+// function for game over
 function gameOver(){
     $("img").attr("src", "assets/IAoG.gif")
     $(".message").html("Looks like you didn't make it...<br>better luck next time...")
